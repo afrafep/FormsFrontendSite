@@ -1,13 +1,14 @@
-import { Route, Routes } from "react-router";
+import { Routes, Route, Navigate } from "react-router-dom";
+import NovaAdesao from "../pages/AdesionExterno";
 import NotFound from "../components/NotFound";
-import AdesionNova from "../pages/AdesionExterno";
 
-export const Initial = () => {
-
+export function App() {
   return (
-    <Routes>    
-    <Route path="*" element={<NotFound/>} />   
-    <Route path="/NovaAdesao"  element={<AdesionNova />} /> 
-  </Routes>
+    <Routes>
+      {/* Redireciona raiz para /NovaAdesao */}
+      <Route path="/" element={<Navigate to="/NovaAdesao" replace />} />
+      <Route path="/NovaAdesao" element={<NovaAdesao />} />
+      <Route path="*" element={<NotFound />} />
+    </Routes>
   );
-};
+}

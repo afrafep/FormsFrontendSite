@@ -1,7 +1,1 @@
-import { Initial } from "./routes";
-
-export const App = () => {
-  return (    
-      <Initial />
-  );
-};
+export { App } from "./routes";
