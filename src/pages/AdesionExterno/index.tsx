@@ -94,38 +94,40 @@ function App() {
   );
 
   return (
-    // Container principal da página com fundo cinza claro
-    <div className="bg-gray-100 min-h-screen p-4 sm:p-6 md:p-8">
-      {/* Card principal com conteúdo */}
-      <div className="max-w-4xl mx-auto bg-white p-6 sm:p-8 rounded-2xl shadow-lg">
-        <ToastContainer
-          position="top-right"
-          autoClose={5000}
-          hideProgressBar={false}
-        />
+  // Container principal da página com fundo cinza claro
+  <div className=" min-h-screen p-4 sm:p-6 md:p-8 flex justify-center">
+    {/* Card principal com conteúdo */}
+    <div className="w-4/5 bg-white p-6 sm:p-8 rounded-2xl ">
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+      />
 
-        <h1 className="text-2xl sm:text-3xl font-bold text-gray-800 text-center mb-8">
-          <img src={Logo} alt="" className="mb-4" />
-          Termo de Adesão ao Plano de Saúde
-        </h1>
-        <div className="flex flex-row gap-6 mb-10">
-          <SelectionOption value="B" label="Adesão Individual">
-            <span className="text-black">
-              Quero solicitar apenas a minha adesão ao plano de saúde.
-            </span>
-          </SelectionOption>
-          <SelectionOption value="C" label="Adesão Familiar">
-            <span className="text-black">
-              Quero solicitar a minha adesão e a dos meus dependentes.
-            </span>
-          </SelectionOption>
-        </div>
+      <h1 className="text-2xl sm:text-3xl font-bold text-gray-800 text-center mb-8">
+        <img src={Logo} alt="" className="mb-4 mx-auto" />
+        Termo de Adesão ao Plano de Saúde
+      </h1>
 
-        {/* A tabela de dados será renderizada aqui */}
-        <Tabela />
+      <div className="justify-center flex flex-row gap-6 mb-10">
+        <SelectionOption value="B" label="Adesão Individual">
+          <span className="text-black">
+            Quero solicitar apenas a minha adesão ao plano de saúde.
+          </span>
+        </SelectionOption>
+        <SelectionOption value="C" label="Adesão Familiar">
+          <span className="text-black">
+            Quero solicitar a minha adesão e a dos meus dependentes.
+          </span>
+        </SelectionOption>
       </div>
+
+      {/* A tabela de dados será renderizada aqui */}
+      <Tabela />
     </div>
-  );
+  </div>
+);
+
 }
 
 export default App;

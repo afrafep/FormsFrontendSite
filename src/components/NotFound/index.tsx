@@ -64,12 +64,12 @@ const NotFound = () => {
 
         {/* Se houver token, exibe "Home", senão, "Login" */}
         <Link
-          to={isAuthenticated ? "/NovaAdesao" : "/login"}
+          to={isAuthenticated ? "/NovaAdesao" : "/NovaAdesao"}
           style={{ ...styles.button, ...(isHovered ? styles.buttonHover : {}) }}
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
         >
-          {isAuthenticated ? "Voltar para a Página Inicial" : "Fazer Login"}
+          {isAuthenticated ? "Voltar para a Página Inicial" : "Voltar"}
         </Link>
       </div>
 

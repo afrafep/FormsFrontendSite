@@ -1183,7 +1183,7 @@ const Tabela: React.FC = () => {
 
   return (
     <div className="max-x-auto">
-      <div className="bg-gray-50 p-4 sm:p-6 md:p-8">
+      <div className=" p-4 sm:p-6 md:p-8">
         <form
           onSubmit={handleSubmit}
           className="max-w-4xl mx-auto bg-white p-6 rounded-xl shadow-md space-y-8"

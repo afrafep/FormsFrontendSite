@@ -5,12 +5,9 @@ import AdesionNova from "../pages/AdesionExterno";
 export const Initial = () => {
 
   return (
-    <Routes>
-    
+    <Routes>    
     <Route path="*" element={<NotFound/>} />   
     <Route path="/NovaAdesao"  element={<AdesionNova />} /> 
-
-
   </Routes>
   );
 };
